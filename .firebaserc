@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "oshop1405": {
+      "hosting": {
+        "oshop": [
+          "oshop1405"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "oshop1405"
+  }
+}
