@@ -24,13 +24,13 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { AdminAuthGuardService } from './auth/admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
-
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -50,13 +50,6 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     FormsModule,
     NgbModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -101,8 +94,8 @@ import { MatIconModule } from '@angular/material/icon';
         canActivate: [AuthGuardService, AdminAuthGuardService],
       },
     ]),
+    FontAwesomeModule,
   ],
-  exports: [MatInputModule],
   providers: [],
   bootstrap: [AppComponent],
 })
