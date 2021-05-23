@@ -34,6 +34,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
+import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
+import { ShoppingFormComponent } from './shopping-form/shopping-form.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     ProductFilterComponent,
     ProductCardComponent,
     ProductQuantityComponent,
+    ShoppingCartSummaryComponent,
+    ShoppingFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,11 +70,11 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
       { path: 'login', component: LoginComponent },
       {
         path: 'check-out',
-        component: OrderSuccessComponent,
+        component: CheckOutComponent,
         canActivate: [AuthGuardService],
       },
       {
-        path: 'order-success',
+        path: 'order-success/:id',
         component: OrderSuccessComponent,
         canActivate: [AuthGuardService],
       },
