@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
-import { ProductModel } from '../models/app-common-model';
+import { Product } from '../models/app-common-model';
 
 @Injectable({
   providedIn: 'root',
@@ -9,27 +9,26 @@ import { ProductModel } from '../models/app-common-model';
 export class ProductService {
   constructor(private db: AngularFireDatabase) {}
 
-  create(product) {
+  create(product: Product) {
     this.db.list('/products').push(product);
   }
 
   getAll() {
     return this.db
-      .list<ProductModel>('/products')
+      .list<Product>('/products')
       .snapshotChanges()
       .pipe(
         map((products) =>
           products.map((product) => {
-            return { key: product.key, payload: product.payload.val() };
+            const { title, price, category, imageUrl } = product.payload.val();
+            return { key: product.key, title, price, category, imageUrl };
           })
         )
       );
   }
 
   get(productId) {
-    return this.db
-      .object<ProductModel>('/products/' + productId)
-      .valueChanges();
+    return this.db.object<Product>('/products/' + productId).valueChanges();
   }
 
   update(productId, product) {

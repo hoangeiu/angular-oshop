@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product, ProductModel } from '../models/app-common-model';
+import { Cart, Product } from '../models/app-common-model';
+import { ShoppingCartService } from '../services/shopping-cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -7,10 +8,15 @@ import { Product, ProductModel } from '../models/app-common-model';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: ProductModel;
+  @Input() product: Product;
   @Input() showActions = true;
+  @Input() shoppingCart: Cart;
 
-  constructor() {}
+  constructor(private shoppingCartService: ShoppingCartService) {}
 
   ngOnInit(): void {}
+
+  addToCart() {
+    this.shoppingCartService.addToCart(this.product);
+  }
 }

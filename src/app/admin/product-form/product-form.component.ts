@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
-import { Category, ProductModel } from 'src/app/models/app-common-model';
+import { Category, Product } from 'src/app/models/app-common-model';
 import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -14,7 +14,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductFormComponent implements OnInit, OnDestroy {
   categories: Category[];
-  product: ProductModel;
+  product: Product;
   id;
   @ViewChild('f', { static: true }) productForm: NgForm;
   private subscription: Subscription;
@@ -46,6 +46,8 @@ export class ProductFormComponent implements OnInit, OnDestroy {
           });
         });
     }
+
+    // this.productForm.valueChanges.subscribe((data) => (this.product = data));
   }
 
   ngOnDestroy() {

@@ -12,7 +12,7 @@ import { faEdit } from '@fortawesome/free-regular-svg-icons';
 })
 export class AdminProductsComponent implements OnInit, OnDestroy {
   products: Product[];
-  filteredProducts: any[];
+  filteredProducts: Product[];
   private subscription: Subscription;
 
   faEdit = faEdit;
@@ -36,14 +36,12 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   filter(query: HTMLInputElement) {
     this.filteredProducts = query.value
       ? this.products.filter((p) => {
-          return p.payload.title
-            .toLowerCase()
-            .includes(query.value.toLowerCase());
+          return p.title.toLowerCase().includes(query.value.toLowerCase());
         })
       : this.products;
   }
 
-  onClick() {
+  onAdd() {
     this.router.navigate(['new'], { relativeTo: this.route });
   }
 
