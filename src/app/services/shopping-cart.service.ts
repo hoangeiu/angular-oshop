@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { Cart, ItemInCart, Product } from '../models/app-common-model';
+import { Cart, ItemInCart, Product } from '../shared/models/app-common-model';
 
 @Injectable({
   providedIn: 'root',

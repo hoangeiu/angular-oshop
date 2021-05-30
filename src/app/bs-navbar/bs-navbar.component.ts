@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
-import { Cart } from '../models/app-common-model';
-import { AppUser } from '../models/app-user';
+import { Cart } from '../shared/models/app-common-model';
+import { AppUser } from '../shared/models/app-user';
 import { ShoppingCartService } from '../services/shopping-cart.service';
 import { faCartPlus, faStoreAlt } from '@fortawesome/free-solid-svg-icons';
 

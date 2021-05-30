@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Product } from 'src/app/models/app-common-model';
+import { Product } from 'src/app/shared/models/app-common-model';
 import { ProductService } from 'src/app/services/product.service';
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
 
