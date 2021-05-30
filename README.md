@@ -1,27 +1,39 @@
 # Oshop
+- In this project, I practice developing a website using Angular. I created this website to manage food ingredients and also provide a shopping cart to add items and purchase them.
+- I study many new thing from Angular: the basic concept of Angular, databinding, directive, services and injection, routing, Observable (Subject), control Form, pipes, making http requets, authentication, dynamic components (ngIf & modalRef), evironments, lazy loading and deploy Angular app.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
+Key-features: Angular(10) features and Firebase.
 
-## Development server
+[Live Demo](https://oshop1405.firebaseapp.com/)
+[Udemy Course](https://www.udemy.com/course/the-complete-angular-master-class/) - Last updated 4/2018
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Specifically you will learn:
 
-## Code scaffolding
+- Displaying data and handling events
+- Building re-usable components
+- Manipulating the DOM using directives 
+- Formatting data using pipes
+- Building template-driven and reactive forms 
+- Consuming HTTP services 
+- Handling HTTP errors properly 
+- Using Reactive Extensions and observables 
+- Adding routing and navigation
+- Implementing authentication and authorization using JSON Web Tokens (JWT) 
+- Deploying your applications to GitHub Pages, Firebase and Heroku
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Ng10CompleteGuide
 
-## Build
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.4.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# After you fork and clone:
 
-## Running unit tests
+## Install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to build all the dependencies in the project.
 
-## Running end-to-end tests
+## Set your firebase config
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Remember to replace the variables in your `environment.ts` `environment.prod.ts` with your own config object from the firebase dashboard! Navigate to the project settings and scroll down to the config code. Copy the object in the code and replace the variables in your cloned code.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![alt text](https://i.ibb.co/dgKGP9F/firebase-config-1.png "image to firebase config 1")
+![alt text](https://i.ibb.co/T1r98QL/firebase-config-2.png "image to firebase config 2")
