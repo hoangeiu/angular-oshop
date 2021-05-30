@@ -5,7 +5,9 @@
 Key-features: Angular(10) features and Firebase.
 
 [Live Demo](https://oshop1405.firebaseapp.com/)
+
 [Udemy Course](https://www.udemy.com/course/the-complete-angular-master-class/) - Last Udemy updated 4/2018
+
 [Trello](https://trello.com/b/Z8EjRWWb) 
 
 #### Specifically you will learn:
